@@ -4,7 +4,7 @@ import FontDemo from './FontDemo'
 import FontSelector from './FontSelector'
 import FontImporter from './FontImporter'
 import FontContext from '../contexts/FontContext'
-import FontReducer from '../reducers/FontReducer';
+import FontReducer from '../reducers/FontReducer'
 
 const App = () => {
     const [ state, setState ] = FontReducer()

@@ -17,7 +17,7 @@ const FontDemo = () => {
         font-family: '${ family }';
         font-weight: ${ font };
         font-size: ${ size }px;
-    `;
+    `
 
     return <Paragraph>{ defaultText }</Paragraph>
 }
