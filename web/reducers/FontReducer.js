@@ -10,6 +10,7 @@ const defaultSubset = 'latin'
 const defaultFamily = 'IBM Plex Mono'
 const defaultFont = '400'
 const defaultSize = 16
+const defaultWidth = 700;
 
 const subsets = getSubsetList()
 const subset = defaultSubset
@@ -27,6 +28,7 @@ export default () => useReducer(
         const fonts = diff.subset || diff.family ? getFontList(family) : oldState.fonts
         const font = diff.font ? diff.font : fonts.indexOf(oldState.font) > -1 ? oldState.font : fonts[0]
         const size = diff.size || oldState.size
+        const width = diff.width || oldState.width
 
         return {
             subsets,
@@ -36,6 +38,7 @@ export default () => useReducer(
             fonts,
             font,
             size,
+            width,
         }
     },
     {
@@ -46,5 +49,6 @@ export default () => useReducer(
         fonts,
         font,
         size: defaultSize,
+        width: defaultWidth,
     }
 )

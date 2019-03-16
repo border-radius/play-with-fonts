@@ -16,6 +16,7 @@ const App = () => {
             state.family,
             state.font,
             state.size,
+            state.width,
         ]
     )
 

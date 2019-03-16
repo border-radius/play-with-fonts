@@ -8,12 +8,13 @@ const FontDemo = () => {
     const {
         family,
         font,
-        size
+        size,
+        width,
     } = useContext(FontContext)
 
     const Paragraph = styled.p`
         padding: 0 22px;
-        width: 700px;
+        width: ${width}px;
         font-family: '${ family }';
         font-weight: ${ font };
         font-size: ${ size }px;

@@ -16,14 +16,14 @@ const FontSelector = () => {
         fonts,
         font,
         size,
+        width,
     } = useContext(FontContext)
     
     const subsetChange = ({ target }) => setState({ subset: target.value })
     const familyChange = ({ target }) => setState({ family: target.value })
     const fontChange = ({ target }) => setState({ font: target.value })
     const sizeChange = ({ target }) => setState({ size: target.value })
-
-
+    const widthChange = ({ target }) => setState({ width: target.value })
 
     return (
         <Container>
@@ -33,6 +33,10 @@ const FontSelector = () => {
             <Section>
                 <Label>Size</Label>
                 <InputNumber type='number' onChange={ sizeChange } value={ size } />
+            </Section>
+            <Section>
+                <Label>Width</Label>
+                <InputNumber type='number' onChange={ widthChange } value={ width } />
             </Section>
         </Container>
     )
