@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
-import FontContext from '../../contexts/FontContext'
 import Container from './Container'
 import Section from './Section'
 import Label from './Label'
 import InputNumber from './InputNumber'
 import SelectField from './SelectField'
 
-const FontSelector = () => {
+const FontSelector = ({ context }) => {
     const {
         setState,
         subsets,
@@ -17,7 +16,7 @@ const FontSelector = () => {
         font,
         size,
         width,
-    } = useContext(FontContext)
+    } = useContext(context)
     
     const subsetChange = ({ target }) => setState({ subset: target.value })
     const familyChange = ({ target }) => setState({ family: target.value })

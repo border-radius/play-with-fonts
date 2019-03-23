@@ -1,10 +1,11 @@
-import React, { useMemo } from 'react'
+import React, { createContext, useMemo } from 'react'
 
 import FontDemo from './FontDemo'
 import FontSelector from './FontSelector'
 import FontImporter from './FontImporter'
-import FontContext from '../contexts/FontContext'
 import FontReducer from '../reducers/FontReducer'
+
+const FontContext = createContext({})
 
 const App = () => {
     const [ state, setState ] = FontReducer()
@@ -22,9 +23,9 @@ const App = () => {
 
     return (
         <FontContext.Provider value={ contextValue }>
-            <FontSelector />
-            <FontImporter />
-            <FontDemo />
+            <FontSelector context={ FontContext } />
+            <FontImporter context={ FontContext } />
+            <FontDemo context={ FontContext } />
         </FontContext.Provider>
     )
 }

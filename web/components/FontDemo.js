@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 import React, { useContext } from 'react'
-import FontContext from '../contexts/FontContext'
 
 const defaultText = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quo labore nulla. Corporis possimus asperiores sit voluptates debitis voluptas, pariatur accusamus. Cupiditate ipsum tempora, natus earum ex hic nesciunt soluta!';
 
-const FontDemo = () => {
+const FontDemo = ({ context }) => {
     const {
         family,
         font,
         size,
         width,
-    } = useContext(FontContext)
+    } = useContext(context)
 
     const Paragraph = styled.p`
         padding: 0 22px;

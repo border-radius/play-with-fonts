@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
-import FontContext from '../contexts/FontContext'
 
-const FontImporter = () => {
+const FontImporter = ({ context }) => {
     const {
         subset,
         family,
         font,
-    } = useContext(FontContext)
+    } = useContext(context)
 
     const familyUri = family.replace(/\s+/g, '+')
     const importUrl = `https://fonts.googleapis.com/css?family=${ familyUri }:${ font }&amp;subset=${ subset }`
