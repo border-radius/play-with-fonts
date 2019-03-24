@@ -8,7 +8,7 @@
 git clone https://github.com/border-radius/play-with-fonts
 cd play-with-fonts
 npm install
-npm start
+npm run dev
 ```
 
-And open your browser at [localhost:1234](http://localhost:1234).
+And open your browser at [localhost:3000](http://localhost:3000).
