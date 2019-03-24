@@ -1,8 +1,8 @@
-import React, { createContext, useMemo } from 'react'
+import { createContext, useMemo } from 'react'
 
-import FontDemo from './FontDemo'
-import FontSelector from './FontSelector'
-import FontImporter from './FontImporter'
+import FontDemo from '../components/FontDemo'
+import FontSelector from '../components/FontSelector'
+import FontImporter from '../components/FontImporter'
 import FontReducer from '../reducers/FontReducer'
 
 const FontContext = createContext({})

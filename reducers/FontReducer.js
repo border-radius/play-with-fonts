@@ -4,7 +4,7 @@ import {
     getSubsetList,
     getFamilyList,
     getFontList,
-} from '../../data/fonts'
+} from '../data/fonts'
 
 const defaultSubset = 'latin'
 const defaultFamily = 'IBM Plex Mono'

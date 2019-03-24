@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
 const FontImporter = ({ context }) => {
     const {
@@ -10,7 +10,7 @@ const FontImporter = ({ context }) => {
     const familyUri = family.replace(/\s+/g, '+')
     const importUrl = `https://fonts.googleapis.com/css?family=${ familyUri }:${ font }&amp;subset=${ subset }`
 
-    return <style>{ `@import url('${ importUrl }');` }</style>
+    return <style global jsx>{ `@import url('${ importUrl }');` }</style>
 }
 
 export default FontImporter

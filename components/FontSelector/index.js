@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import Container from './Container'
 import Section from './Section'
 import Label from './Label'

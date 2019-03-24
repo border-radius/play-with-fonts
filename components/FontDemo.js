@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 
 const defaultText = `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 Architecto quo labore nulla.
@@ -11,10 +11,10 @@ const TextArea = ({ value, onChange, className }) => (
         value={ value }
         onChange={ onChange }
         className={ className }
-        autocomplete='off'
-        autocorrect='off'
-        autocapitalize='off'
-        spellcheck='false'
+        autoComplete='off'
+        autoCorrect='off'
+        autoCapitalize='off'
+        spellCheck='false'
     />
 )
 

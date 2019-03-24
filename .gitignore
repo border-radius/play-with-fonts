@@ -1,4 +1,4 @@
-dist
-.cache
+.next
 node_modules
 data/familyMetadataList.json
+package-lock.json
