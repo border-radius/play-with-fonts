@@ -10,7 +10,8 @@
     "update-fonts": "babel-node --presets es2015 bin/update-fonts.js",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "fmt": "prettier --write --single-quote --jsx-single-quote --no-semi --trailing-comma es5 \"{pages,reducers,bin,data,components}/**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,9 @@
   "babel": {
     "env": {
       "development": {
-        "presets": ["next/babel"],
+        "presets": [
+          "next/babel"
+        ],
         "plugins": [
           [
             "styled-components",
@@ -45,7 +48,9 @@
         ]
       },
       "production": {
-        "presets": ["next/babel"],
+        "presets": [
+          "next/babel"
+        ],
         "plugins": [
           [
             "styled-components",
@@ -57,5 +62,8 @@
         ]
       }
     }
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
   }
 }

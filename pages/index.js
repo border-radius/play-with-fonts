@@ -8,26 +8,23 @@ import FontReducer from '../reducers/FontReducer'
 const FontContext = createContext({})
 
 const App = () => {
-    const [ state, setState ] = FontReducer()
+  const [state, setState] = FontReducer()
 
-    const contextValue = useMemo(
-        () => ({ ...state, setState }),
-        [
-            state.subset,
-            state.family,
-            state.font,
-            state.size,
-            state.width,
-        ]
-    )
+  const contextValue = useMemo(() => ({ ...state, setState }), [
+    state.subset,
+    state.family,
+    state.font,
+    state.size,
+    state.width,
+  ])
 
-    return (
-        <FontContext.Provider value={ contextValue }>
-            <FontSelector context={ FontContext } />
-            <FontImporter context={ FontContext } />
-            <FontDemo context={ FontContext } />
-        </FontContext.Provider>
-    )
+  return (
+    <FontContext.Provider value={contextValue}>
+      <FontSelector context={FontContext} />
+      <FontImporter context={FontContext} />
+      <FontDemo context={FontContext} />
+    </FontContext.Provider>
+  )
 }
 
 export default App
